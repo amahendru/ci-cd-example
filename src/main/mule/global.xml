@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
+	<api-gateway:autodiscovery apiId="${api.id}" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="a94e0949-e54f-4229-8608-c59c8cced029" flowRef="ci-cd-exampleFlow" />
+	<configuration-properties doc:name="Configuration properties" doc:id="d410a283-4bb9-425e-bd36-af0f04eea69a" file="config/${mule.env}-config.yaml" />
+	<global-property doc:name="Global Property" doc:id="8ce31ee9-c98c-42b4-8281-279ba3cc6718" name="mule.env" value="local" />
+</mule>

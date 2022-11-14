@@ -4,7 +4,7 @@
 
 	<groupId>f724cfb6-c219-4edb-9767-8f48012b5cd9</groupId>
 	<artifactId>ci-cd-example-app</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
 	<name>ci-cd-example</name>
@@ -13,13 +13,13 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	
-		<mule.maven.plugin.version>3.5.4</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.8.2</mule.maven.plugin.version>
 		
 		<app.name.version>v1</app.name.version>
 		<app.runtime>4.4.0</app.runtime>
 		<app.name>${mule.env}-${project.artifactId}-${app.name.version}</app.name>
 		
-		<api.instance.id>1234567</api.instance.id>
+		<api.instance.id>18303864</api.instance.id>
 		<layer>system</layer>
 		
 		<deployment.target>rtf</deployment.target>
@@ -84,7 +84,9 @@
 							<mule.env>${mule.env}</mule.env>
 							<anypoint.platform.base_uri>${anypoint.base_uri}</anypoint.platform.base_uri>
 							<anypoint.platform.analytics_base_uri>${anypoint.analytics_base_uri}</anypoint.platform.analytics_base_uri>
-							<api.id>${api.id}</api.id>
+							<api.id>${api.instance.id}</api.id>
+							<anypoint.platform.client_id>${anypoint.client.id}</anypoint.platform.client_id>
+							<anypoint.platform.client_secret>${anypoint.client.secret}</anypoint.platform.client_secret>
 						</properties>
 						<deploymentSettings>
 							<enforceDeployingReplicasAcrossNodes>false</enforceDeployingReplicasAcrossNodes>
